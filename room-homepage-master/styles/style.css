@@ -1,0 +1,546 @@
+:root {
+    /* Primary */
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+    --a-color: hsl(228, 45%, 44%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'League Spartan';
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container1 {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+.boxLeft {
+    display: flex;
+    width: 60%;
+}
+.bg {
+    /* background-image: url(/images/desktop-image-hero-1.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 28rem;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu, .close {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    font-size: 3rem;
+    color: var(--White);
+    margin-left: 2rem;
+}
+
+.nav-links {
+    margin-left: 5rem;
+    display: flex;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    display: block;
+    margin: 1.5rem;
+    color: var(--White);
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    cursor: pointer;
+    position: relative;
+}
+
+li::before {
+content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 2rem;
+  height: 3px;
+  background-color: var(--White);
+  transition: 300ms ease-out;
+  transform: scaleX(0);
+}
+
+li:hover::before,
+li:focus::before {
+  transform: scaleX(1);
+}
+
+.boxRight {
+    display: flex;
+    flex-direction: column;
+    padding: 15rem 9.5rem 0rem;
+    width: 40%;
+    position: relative;
+}
+
+h1 {
+    font-size: 4.2rem;
+}
+
+p {
+    padding-top: 2rem;
+    color: var(--Dark-Gray);
+    font-size: 1.52rem;
+    font-weight: 300;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+#shop {
+    padding-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--Very-Dark-Gray);
+}
+
+#shop:hover {
+    color: var(--Dark-Gray);
+}
+
+.buttons {
+    background: var(--Black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#left, #right {
+    background: var(--Black);
+    padding: 2.5rem 3rem;
+    margin: 0;
+}
+
+#left:hover, #right:hover {
+    background: var(--Very-Dark-Gray);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container2 {
+    width: 30%;
+}
+
+.container3 {
+    width: 40%;
+}
+
+.container4 {
+    width: 30%;
+}
+
+.container2 img, .container4 img {
+    width: 100%;
+    height: 100%;
+}
+
+.container3 {
+    padding: 6rem 4.5rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--Black);
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.container3 p {
+    padding-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.attribution {
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.attribution a {
+    color: var(--a-color);
+}
+
+@media (max-width: 1024px) {
+    .bg {
+        padding: 21rem;
+    }
+
+    nav {
+        padding: 2rem;
+    }
+
+    .nav-links {
+        margin-left: 2.5rem;
+    }
+
+    li {
+        margin: 1rem;
+    }
+    .boxRight {
+        padding: 10rem 5.5rem 0;
+    }
+
+    h1 {
+        font-size: 3rem
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    #left, #right {
+        padding: 1.5rem 2rem;
+    }
+    .container3 {
+        padding: 4rem 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container3 p {
+        font-size: 1.15rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 2.5rem;
+        width: 100%;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        left: 5%;
+        top: 40%;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .nav-links {
+        position: fixed;
+        inset: 0 0 70% 0;
+        background: var(--White);
+        flex-direction: row;
+        align-items: center;
+        margin-left: 0;
+        padding-left: 1.5rem;
+        display: none;
+        z-index: 1;
+    }
+
+    .nav-links ul {
+        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-left: 5rem;
+    }
+
+    .close {
+        display: block;
+        margin-left: 1.5rem;
+    }
+
+    li {
+        color: var(--Black);
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 0 2rem;
+    }
+
+    li::before {
+        background: var(--Black);
+    }
+
+    .container1 {
+        flex-direction: column;
+    }
+
+    .boxLeft, .boxRight, .container2, .container3, .container4  {
+        width: 100%;
+    }
+
+    .bg {
+        /* background: url(/images/mobile-image-hero-1.jpg); */
+        background-position: center bottom ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding: 28rem;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .buttons {
+        position: absolute;
+        top: -28%;
+        left: 82%;
+        width: 10%;
+        height: 6rem;
+        background: transparent;
+        display: flex;
+    }
+
+    .boxRight {
+        padding: 5rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    #shop {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 8px;
+        padding-top: 2rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .container3 {
+        padding: 6rem 5rem;
+    }
+
+    .container3 p {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 540px) {
+    .nav-links {
+        inset: 0 0 80% 0;
+    }
+
+    .bg {
+        padding: 25rem;
+    }
+
+    .buttons {
+        position: absolute;
+        top: -16%;
+        left: 80%;
+    }
+}
+
+@media (max-width: 414px) {
+    .nav-links {
+        inset: 0 0 85% 0;
+    }
+
+    li {
+        margin: 0 1rem;
+        font-size: 1.6rem;
+    }
+
+    .bg {
+        background-position: center right;
+        padding: 22rem 20rem;
+    }
+
+    .buttons {
+        position: absolute;
+        top: -16%;
+        left: 74%;
+    }
+
+    .boxRight {
+        padding: 5rem 3rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    .container3 {
+        padding: 6rem 3.5rem;
+    }
+}
+
+@media (max-width: 412px) {
+    .bg {
+        background-position: center right;
+        padding: 22rem;
+    }
+    .buttons {
+        position: absolute;
+        top: -16%;
+        left: 75%;
+    }
+}
+
+@media (max-width: 393px) {
+    .bg {
+        background-position: center left;
+        padding: 22rem 21rem;
+    }
+    .buttons {
+        position: absolute;
+        top: -15%;
+        left: 74%;
+    }
+}
+
+@media (max-width: 390px) {
+    .bg {
+        background-position: center left;
+        padding: 22rem 21rem;
+    }
+    .buttons {
+        position: absolute;
+        top: -15%;
+        left: 78%;
+    }
+
+    .container2, .container3, .container4 {
+        width: 105%;
+    } 
+    
+}
+
+@media (max-width: 375px) {
+    
+    .nav-links {
+        inset: 0 0 85% 0;
+    }
+    .nav-links  ul {
+        margin-left: 1rem;
+    }
+
+    li {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    .bg {
+        background-position: center right;
+        padding: 22rem 20rem;
+    }
+
+    .buttons {
+        position: absolute;
+        top: -18%;
+        left: 71%;
+    }
+
+    .boxRight {
+        padding: 5rem 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+    .container3 {
+        padding: 6rem 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .container3 {
+        padding: 6rem 3rem;
+    }
+
+    .container3 p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .bg {
+        background-position: center right;
+        padding: 22rem 20rem;
+    }
+    .buttons {
+        position: absolute;
+        top: -16%;
+        left: 75%;
+    }
+}
